@@ -42,7 +42,7 @@ function getAverageFitness(population) {
     const totalFitness = population.reduce((sum, x) => sum + fitness(x), 0);
     return totalFitness / population.length;
 }
-// Chạy thuật toán di truyền
+//Run Genetic Algorithm
 function geneticAlgorithm() {
     let population = createInitialPopulation();
     for (let i = 0; i < config.maxGenerations; i++) {
@@ -55,11 +55,11 @@ function geneticAlgorithm() {
         //Create new populations from hybridization and mutation
         const newPopulation = [];
         while (newPopulation.length < config.populationSize - config.elitismCount) {
-        const a = selection(population);
-        const b = selection(population);
-        const child = crossover(a, b, config.crossoverRate);
-        mutate(child, config.mutationRate);
-        newPopulation.push(child);
+            const a = selection(population);
+            const b = selection(population);
+            const child = crossover(a, b, config.crossoverRate);
+            mutate(child, config.mutationRate);
+            newPopulation.push(child);
         }
         //Add elitism
         const elitePopulation = getFittest(population, config.elitismCount);
