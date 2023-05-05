@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-class TSP_GA{
+class TSP_GA {
     static void Main(){
         Console.WriteLine("Nhap so thanh pho: ");
         int n = Int32.Parse(Console.ReadLine());

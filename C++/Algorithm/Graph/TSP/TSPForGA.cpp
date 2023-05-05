@@ -15,20 +15,20 @@ int a[POPSIZE][MAXN]; //Solution Matrix
 double fit[POPSIZE]; //Value fitness
 
 //Create solution
-void init() {
-    for(int t = 0; t < POPSIZE; ++t) {
-        for(int i = 0; i < n; ++i) {
+void init(){
+    for(int t = 0; t < POPSIZE; ++t){
+        for(int i = 0; i < n; ++i){
             a[t][i] = i;
         }
-        for(int i = 0; i < n; ++i) {
+        for(int i = 0; i < n; ++i){
             int j = rand() % n;
             swap(a[t][i], a[t][j]);
         }
     }
 }
 //Update fitness
-void calcFitness() {
-    for(int t = 0; t < POPSIZE; ++t) {
+void calcFitness(){
+    for(int t = 0; t < POPSIZE; ++t){
         fit[t] = 0;
         for(int i = 0; i < n - 1; ++i) {
             fit[t] += d[a[t][i]][a[t][i + 1]];
@@ -37,35 +37,35 @@ void calcFitness() {
     }
 }
 //Crossover
-void crossover(int t1, int t2) {
+void crossover(int t1, int t2){
     int p = rand() % (n - 1) + 1;
-    for(int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         if(i < p) {
             continue;
         }
         int j = 0;
-        while(j < n && a[t1][j] != a[t2][i]) {
+        while(j < n && a[t1][j] != a[t2][i]){
             ++j;
         }
         if(j == n) {
             a[t1][p++] = a[t2][i];
         }
     }
-    for(int i = 0; i < n; ++i) {
-        if(i < p) {
+    for(int i = 0; i < n; ++i){
+        if(i < p){
             continue;
         }
         int j = 0;
-        while(j < n && a[t2][j] != a[t1][i]) {
+        while(j < n && a[t2][j] != a[t1][i]){
             ++j;
         }
-        if(j == n) {
+        if(j == n){
             a[t2][p++] = a[t1][i];
         }
     }
 }
 //Mutate
-void mutate(int t) {
+void mutate(int t){
     int p1 = rand() % n;
     int p2 = rand() % n;
     while(p1 == p2) {
@@ -74,7 +74,7 @@ void mutate(int t) {
     swap(a[t][p1], a[t][p2]);
 }
 //Selection
-void selection() {
+void selection(){
     double newFit[POPSIZE + 1];
     int idx[POPSIZE + 1];
     for(int t = 0; t < POPSIZE; ++t) {
@@ -82,10 +82,10 @@ void selection() {
         newFit[t] = 1.0 / (1.0 + fit[t]);
     }
     newFit[POPSIZE] = 0;
-    for(int t = 0; t < POPSIZE; ++t) {
+    for(int t = 0; t < POPSIZE; ++t){
         newFit[POPSIZE] += newFit[t];
     }
-    for(int t = 0; t < POPSIZE; ++t) {
+    for(int t = 0; t < POPSIZE; ++t){
         double r = (double)rand() / RAND_MAX * newFit[POPSIZE];
         int i = 0;
         while(r > newFit[i]) {
@@ -103,19 +103,19 @@ void selection() {
         }
         while(i == j);
         crossover(idx[i], idx[j]);
-        if((double)rand() / RAND_MAX < MUTRATIO) {
+        if((double)rand() / RAND_MAX < MUTRATIO){
             mutate(idx[i]);
         }
-        if((double)rand() / RAND_MAX < MUTRATIO) {
+        if((double)rand() / RAND_MAX < MUTRATIO){
             mutate(idx[j]);
         }
     }
 }
 //Find best solution
-int findBestSolution() {
+int findBestSolution(){
     int bestidx =0;
     double bestfit = fit[0];
-    for(int i  = 1; i < POPSIZE; ++i) {
+    for(int i  = 1; i < POPSIZE; ++i){
         if(fit[i] < bestfit) {
             bestfit = fit[i];
             bestidx = i;
@@ -124,22 +124,22 @@ int findBestSolution() {
     return bestidx;
 }
 //Print result
-void printResult(int bestidx) {
+void printResult(int bestidx){
     cout << "Best solution: ";
-    for(int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         cout << a[bestidx][i] << " ";
     }
     cout << endl;
     cout << "Best fitness: " << fit[bestidx] << endl;
 }
 //Genetic Algorithm
-void geneticAlgorithm() {
+void geneticAlgorithm(){
     init();
     calcFitness();
     int bestidx = findBestSolution();
     double bestfit = fit[bestidx];
     int cnt = 0;
-    while(cnt < MAXGEN && bestfit > LIMIT) {
+    while(cnt < MAXGEN && bestfit > LIMIT){
         selection();
         calcFitness();
         int tmpidx = findBestSolution();
@@ -155,11 +155,11 @@ void geneticAlgorithm() {
     }
     printResult(bestidx);
 }
-int main() {
+int main(){
     srand((unsigned)time(NULL));
     cin >> n;
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
             cin >> d[i][j];
         }
     }
