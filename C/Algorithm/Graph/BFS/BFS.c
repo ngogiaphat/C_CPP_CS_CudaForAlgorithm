@@ -108,9 +108,8 @@ void bfs(struct graph* graph, int startVertex){
     while (q->rear != -1){
         int currentVertex = dequeue(q);
         printf("Visited %d", currentVertex);
-
         int i;
-        for(i = 0; i < graph->vertices; i++) {
+        for(i = 0; i < graph->vertices; i++){
             if (graph->matrix[currentVertex][i] == 1 && !visited[i]){
                 visited[i] = 1;
                 enqueue(q, i);
