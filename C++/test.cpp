@@ -175,7 +175,7 @@ void input_score_one(TINHOC a[],int n)
 				scanf("%d",&a[i].D_Word);
 				if (a[i].D_Word<0 || a[i].D_Word>10)
 				{
-						printf("\nNhap sai!Vui long nhap lai\n");
+                    printf("\nNhap sai!Vui long nhap lai\n");
 				}
 			}while(a[i].D_Word<0 || a[i].D_Word>10);
 		}
@@ -183,12 +183,13 @@ void input_score_one(TINHOC a[],int n)
 			printf("Nhap diem EXCEL: ");
 			do
 			{
-				scanf("%d",&a[i].D_Excel);
+			    scanf("%d",&a[i].D_Excel);
 				if (a[i].D_Excel<0 || a[i].D_Excel>10)
 				{
-						printf("\nNhap sai!Vui long nhap lai\n");
+                    printf("\nNhap sai!Vui long nhap lai\n");
 				}
-			}while(a[i].D_Excel<0 || a[i].D_Excel>10);
+			}
+            while(a[i].D_Excel<0 || a[i].D_Excel>10);
 		}
 		else if(temp==3)
 		{
