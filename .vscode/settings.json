@@ -1,3 +1,7 @@
 {
+	"editor.tabSize": 2,
+	"C_Cpp.autocomplete": "default",
+	"C_Cpp.autoAddFileAssociations": true,
+	"C_Cpp.caseSensitiveFileSupport": "default",
 	"C_Cpp.errorSquiggles": "enabledIfIncludesResolve",
 }
