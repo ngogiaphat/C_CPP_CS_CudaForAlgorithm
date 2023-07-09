@@ -1,6 +1,14 @@
+plugins {
+    id 'java'
+}
+version '1.0.0'
 repositories {
     jcenter()
+    mavenCentral()
 }
 dependencies {
     testImplementation 'junit:junit:4.12'
+}
+test {
+    useJUnitPlatform()
 }
