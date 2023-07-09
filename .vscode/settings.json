@@ -3,4 +3,5 @@
 	"C_Cpp.autoAddFileAssociations": true,
 	"C_Cpp.caseSensitiveFileSupport": "default",
 	"C_Cpp.errorSquiggles": "enabledIfIncludesResolve",
+	"java.configuration.updateBuildConfiguration": "automatic",
 }
