@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj": {}
+    "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj": {}
   },
   "projects": {
-    "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj": {
+    "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
+        "projectUniqueName": "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
         "projectName": "C#",
-        "projectPath": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
+        "projectPath": "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
         "packagesPath": "C:\\Users\\ngogi\\.nuget\\packages\\",
-        "outputPath": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\obj\\",
+        "outputPath": "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ngogi\\AppData\\Roaming\\NuGet\\NuGet.Config"
