@@ -32,7 +32,7 @@
 	"nim.buildCommand": "c",
 	"nim.buildOnSave": false,
 	"nim.licenseString": "# Copyright 2017.\n\n",
-	"nim.project": ["project.nim", "project2.nim"],
+	"nim.project": ["example.nim", "problem.nim"],
 	"args": ["c", "-r", "module.nim"],
 	"options": {
 		"cwd": "${workspaceRoot}"
