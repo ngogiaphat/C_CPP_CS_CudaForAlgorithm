@@ -110,11 +110,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
+      "projectUniqueName": "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
       "projectName": "C#",
-      "projectPath": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
+      "projectPath": "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
       "packagesPath": "C:\\Users\\ngogi\\.nuget\\packages\\",
-      "outputPath": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\obj\\",
+      "outputPath": "d:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ngogi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -162,7 +162,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
