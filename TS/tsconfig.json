@@ -1,0 +1,40 @@
+{
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "include": ["./**/*.ts"],
+    "allowUnreachableCode": false,
+    "exclude": ["node_modules/**/*"],
+    "extends": "@tsconfig/node12/tsconfig.json",
+    "compilerOptions": {
+        "types": ["node"],
+        "sourceMap": true,
+        "target": "ES2020",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "preserveConstEnums": true,
+        "lib": [
+            "es6",
+            "dom",
+            "ESNext",
+        ],
+    },
+    "files": [
+        "tsc.ts",
+        "sys.ts",
+        "core.ts",
+        "types.ts",
+        "parser.ts",
+        "binder.ts",
+        "scanner.ts",
+        "checker.ts",
+        "emitter.ts",
+        "program.ts",
+        "utilities.ts",
+        "commandLineParser.ts",
+        "diagnosticInformationMap.generated.ts"
+    ]
+}
