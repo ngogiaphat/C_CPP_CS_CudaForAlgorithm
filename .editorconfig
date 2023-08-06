@@ -16,6 +16,9 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 # Jupyter Notebook Files
 [*.{ipynb, nb}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
 # Matches the exact files either package.json or .travis.yml
 [{
     package.json, package-lock.json, .eslintrc.json, .prettierrc.json, .travis.yml, LICENSE, VERSION,
@@ -23,6 +26,8 @@ trim_trailing_whitespace = true
 # JSON Files
 [*.{json, json5, webmanifest}]
 indent_size = 4
+end_of_line = crlf
+indent_style = space
 [*.js, *.ts, *.java]
 charset = utf-8
 indent_size = 4
