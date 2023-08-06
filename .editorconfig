@@ -14,6 +14,8 @@ end_of_line = crlf
 indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
+# Jupyter Notebook Files
+[*.{ipynb, nb}]
 # Matches the exact files either package.json or .travis.yml
 [{
     package.json, package-lock.json, .eslintrc.json, .prettierrc.json, .travis.yml, LICENSE, VERSION,
