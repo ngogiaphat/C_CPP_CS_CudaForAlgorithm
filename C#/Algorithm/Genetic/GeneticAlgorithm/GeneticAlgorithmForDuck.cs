@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-class Program
-{
+class Program {
     static int POPULATION_SIZE = 50;
     static int NUMBER_OF_GENERATIONS = 100;
     static double MUTATION_RATE = 0.01;
@@ -13,22 +12,22 @@ class Program
             population.Add(new Duck());
         }
         //Evolve the population across generations
-        for (int i = 0; i < NUMBER_OF_GENERATIONS; i++){
+        for(int i = 0; i < NUMBER_OF_GENERATIONS; i++){
             // Evaluate the fitness of each individual in the population
             foreach (Duck duck in population){
-                duck.Fitness = duck.CalculateFitness();            
+                duck.Fitness = duck.CalculateFitness();
             }
 
             // Create a new population through selection and crossover
             List<Duck> newPopulation = new List<Duck>();
-            for (int j = 0; j < POPULATION_SIZE; j++){
+            for(int j = 0; j < POPULATION_SIZE; j++){
                 Duck parent1 = SelectParent(population);
                 Duck parent2 = SelectParent(population);
                 Duck child = parent1.Crossover(parent2);
                 newPopulation.Add(child);
             }
             //Mutate the new population
-            foreach (Duck duck in newPopulation){
+            foreach(Duck duck in newPopulation){
                 duck.Mutate(MUTATION_RATE);
             }
 
@@ -41,7 +40,7 @@ class Program
         Duck bestDuck = null;
         foreach (Duck duck in population){
             double fitness = duck.CalculateFitness();
-            if (fitness > bestFitness){
+            if(fitness > bestFitness){
                 bestFitness = fitness;
                 bestDuck = duck;
             }
@@ -53,22 +52,22 @@ class Program
         //Tournament selection: choose two individuals at random and return the fitter one
         int index1 = random.Next(POPULATION_SIZE);
         int index2 = random.Next(POPULATION_SIZE);
-        if (population[index1].Fitness > population[index2].Fitness){
+        if(population[index1].Fitness > population[index2].Fitness){
             return population[index1];
         }
-        else{
+        else {
             return population[index2];
         }
     }
 }
-class Duck{
+class Duck {
     static int GENOME_SIZE = 20;
     static Random random = new Random();
     private bool[] genome;
     public double Fitness { get; set; }
     public Duck(){
         genome = new bool[GENOME_SIZE];
-        for (int i = 0; i < GENOME_SIZE; i++){
+        for(int i = 0; i < GENOME_SIZE; i++){
             genome[i] = random.NextDouble() < 0.5;
         }
     }
@@ -85,12 +84,12 @@ class Duck{
     public Duck Crossover(Duck otherParent){
         //Single-point crossover: choose a random point and exchange genes after that point
         int crossoverPoint = random.Next(GENOME_SIZE);
-        Duck child = new Duck();       
-        for (int i = 0; i < GENOME_SIZE; i++){
-            if (i < crossoverPoint){
+        Duck child = new Duck();
+        for(int i = 0; i < GENOME_SIZE; i++){
+            if(i < crossoverPoint){
                 child.genome[i] = genome[i];
             }
-            else{
+            else {
                 child.genome[i] = otherParent.genome[i];
             }
         }

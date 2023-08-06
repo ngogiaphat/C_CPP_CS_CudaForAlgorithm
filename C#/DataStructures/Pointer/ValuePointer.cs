@@ -1,5 +1,4 @@
-unsafe
-{
+unsafe {
     int x = 10;
     int* ptr = &x; //Declare pointer ptr to variable x
     Console.WriteLine("Value of var x: " + x);

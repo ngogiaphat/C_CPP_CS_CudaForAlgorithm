@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 class Graph {
-    private int V; 
-    private List<int>[] adj; 
+    private int V;
+    private List<int>[] adj;
     public Graph(int v){
         V = v;
         adj = new List<int>[v];
@@ -17,8 +17,7 @@ class Graph {
         Stack<int> stack = new Stack<int>();
         visited[v] = true;
         stack.Push(v);
-        while (stack.Count != 0){
-           
+        while(stack.Count != 0){
             v = stack.Pop();
             Console.Write(v + " ");
             foreach(int i in adj[v]){

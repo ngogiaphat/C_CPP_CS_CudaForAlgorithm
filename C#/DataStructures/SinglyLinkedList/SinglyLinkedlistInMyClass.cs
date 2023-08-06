@@ -9,36 +9,36 @@ class Student{
         NextStudent = null;
     }
 }
-class ClassList{
+class ClassList {
     private Student head;
     public ClassList(){
         head = null;
     }
     public void AddStudent(string name, int studentNumber){
         Student newStudent = new Student(name, studentNumber);
-        if (head == null){
+        if(head == null){
             head = newStudent;
         }
-        else{
+        else {
             Student currentStudent = head;
-            while (currentStudent.NextStudent != null){
+            while(currentStudent.NextStudent != null){
                 currentStudent = currentStudent.NextStudent;
             }
             currentStudent.NextStudent = newStudent;
         }
     }
     public void RemoveStudent(int studentNumber){
-        if (head == null){
+        if(head == null){
             return;
         }
-        if (head.StudentNumber == studentNumber){
+        if(head.StudentNumber == studentNumber){
             head = head.NextStudent;
         }
-        else{
+        else {
             Student previousStudent = head;
-            Student currentStudent = head.NextStudent;         
-            while (currentStudent != null){
-                if (currentStudent.StudentNumber == studentNumber){
+            Student currentStudent = head.NextStudent;
+            while(currentStudent != null){
+                if(currentStudent.StudentNumber == studentNumber){
                     previousStudent.NextStudent = currentStudent.NextStudent;
                     return;
                 }
@@ -48,19 +48,19 @@ class ClassList{
         }
     }
     public void PrintClassList(){
-        if (head == null){
+        if(head == null){
             Console.WriteLine("Class list is empty");
             return;
         }
         Console.WriteLine("Class List:");
         Student currentStudent = head;
-        while (currentStudent != null){
+        while(currentStudent != null){
             Console.WriteLine("Name: " + currentStudent.Name + ", Student Number: " + currentStudent.StudentNumber);
             currentStudent = currentStudent.NextStudent;
         }
     }
 }
-class Program{
+class Program {
     static void Main(){
         ClassList myClassList = new ClassList();
         myClassList.AddStudent("John Doe", 123456);

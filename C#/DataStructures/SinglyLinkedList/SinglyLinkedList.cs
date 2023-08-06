@@ -1,5 +1,5 @@
 using System;
-class LinkedListNode{
+class LinkedListNode {
     public int data;
     public LinkedListNode next;
     public LinkedListNode(int value){
@@ -7,39 +7,37 @@ class LinkedListNode{
         next = null;
     }
 }
-class LinkedList{
+class LinkedList {
     private LinkedListNode head;
     public LinkedList(){
         head = null;
     }
-    public void AddNode(int value)
-    {
+    public void AddNode(int value){
         LinkedListNode newNode = new LinkedListNode(value);
-        if (head == null)
-        {
+        if(head == null){
             head = newNode;
         }
-        else{
+        else {
             LinkedListNode currentNode = head;
-            while (currentNode.next != null){
+            while(currentNode.next != null){
                 currentNode = currentNode.next;
             }
             currentNode.next = newNode;
         }
     }
     public void RemoveNode(int value){
-        if (head == null){
+        if(head == null){
             return;
         }
 
-        if (head.data == value){
+        if(head.data == value){
             head = head.next;
             return;
         }
         LinkedListNode currentNode = head.next;
         LinkedListNode previousNode = head;
-        while (currentNode != null){
-            if (currentNode.data == value){
+        while(currentNode != null){
+            if(currentNode.data == value){
                 previousNode.next = currentNode.next;
                 return;
             }
@@ -47,25 +45,23 @@ class LinkedList{
             currentNode = currentNode.next;
         }
     }
-    public void PrintList()
-    {
-        if (head == null){
+    public void PrintList(){
+        if(head == null){
             Console.WriteLine("LinkedList is empty");
             return;
         }
         LinkedListNode currentNode = head;
-        while (currentNode != null){
+        while(currentNode != null){
             Console.Write(currentNode.data + " ");
             currentNode = currentNode.next;
         }
         Console.WriteLine();
     }
 }
-class Program
-{
+class Program {
     static void Main(){
         LinkedList myList = new LinkedList();
-        for (int i = 0; i < 5; i++){
+        for(int i = 0; i < 5; i++){
             myList.AddNode(i);
         }
         myList.PrintList(); // output: 0 1 2 3 4

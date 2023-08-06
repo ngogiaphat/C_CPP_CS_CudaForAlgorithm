@@ -21,7 +21,7 @@ namespace Vector3D {
             Console.ReadLine();
         };
     };
-    class Vector3D{
+    class Vector3D {
         private double x;
         private double y;
         private double z;

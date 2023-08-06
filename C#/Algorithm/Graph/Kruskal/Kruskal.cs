@@ -2,22 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 class KruskalMst{
-    class Edge{
+    class Edge {
         public int U, V, W;
     }
     static int Find(int[] parent, int i){
-        if (parent[i] == i)
+        if(parent[i] == i)
             return i;
         return parent[i] = Find(parent, parent[i]);
     }
     static void Union(int[] parent, int[] rank, int x, int y){
         int xroot = Find(parent, x);
         int yroot = Find(parent, y);
-        if (rank[xroot] < rank[rootY])
+        if(rank[xroot] < rank[rootY])
             parent[rootX] = rootY;
-        else if (rank[rootX] > rank[rootY])
+        else if(rank[rootX] > rank[rootY])
             parent[rootY] = rootX;
-        else{
+        else {
             parent[rootX] = rootY;
             rank[rootY]++;
         }

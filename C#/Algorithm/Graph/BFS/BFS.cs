@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 public class Graph {
-    private int V; 
-    private List<int>[] adj; 
+    private int V;
+    private List<int>[] adj;
     public Graph(int v){
         V = v;
         adj = new List<int>[v];
-        for (int i = 0; i < v; ++i)
+        for(int i = 0; i < v; ++i)
             adj[i] = new List<int>();
     }
     public void AddEdge(int v, int w){
@@ -17,12 +17,11 @@ public class Graph {
         Queue<int> queue = new Queue<int>();
         visited[s] = true;
         queue.Enqueue(s);
-        while (queue.Count != 0){
+        while(queue.Count != 0){
             s = queue.Dequeue();
             Console.Write(s + " ");
-            foreach (int n in adj[s]){
-                if (!visited[n])
-                {
+            foreach(int n in adj[s]){
+                if(!visited[n]){
                     visited[n] = true;
                     queue.Enqueue(n);
                 }
@@ -33,7 +32,6 @@ public class Graph {
 public class Program {
     public static void Main(){
         Graph g = new Graph(4);
-
         g.AddEdge(0, 1);
         g.AddEdge(0, 2);
         g.AddEdge(1, 2);

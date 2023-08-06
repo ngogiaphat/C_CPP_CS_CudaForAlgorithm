@@ -1,12 +1,12 @@
 class Person {
     public string Name;
     public int Age;
-    public void Display() {
+    public void Display(){
         Console.WriteLine(Name + ", " + Age + " tuoi.");
     }
 }
 class Program {
-    static void Main() {
+    static void Main(){
         Person person1 = new Person();
         person1.Name = "John";
         person1.Age = 30;
