@@ -11,8 +11,8 @@ private void MyTaskCompletedCallback(IAsyncResult ar){
     // raise the completed event
     AsyncCompletedEventArgs completedArgs = new AsyncCompletedEventArgs(null, false, null);
     async.PostOperationCompleted(
-    delegate(object e){
-        OnMyTaskCompleted((AsyncCompletedEventArgs)e);
-    }, completedArgs
-);
+        delegate(object e){
+            OnMyTaskCompleted((AsyncCompletedEventArgs)e);
+        }, completedArgs
+    );
 }
