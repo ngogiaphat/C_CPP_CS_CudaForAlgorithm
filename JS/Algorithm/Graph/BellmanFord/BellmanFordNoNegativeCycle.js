@@ -9,7 +9,7 @@ class Graph {
 	constructor(vertices){
 		this.vertices = vertices;
 		this.edges = [];
-}
+    }
 	addEdge(start, end, weight){
 		const edge = new Edge(start, end, weight);
 		this.edges.push(edge);
