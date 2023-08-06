@@ -56,12 +56,12 @@ static int RouletteWheelSelection(double[] fitnessScores){
     for(int i = 1; i < populationSize; i++){
         cumulativeFitness[i] = cumulativeFitness[i-1] + fitnessScores[i];
     }
-    while(randomValue > cumulativeFitness[parentIndex]){ 
-        parentIndex++; 
+    while(randomValue > cumulativeFitness[parentIndex]){
+        parentIndex++;
     }
     return parentIndex;
 }
-static int[][] Reproduce(int[][] parents){ 
+static int[][] Reproduce(int[][] parents){
     int[][] offspring = new int[populationSize][];
     for(int i = 0; i < populationSize; i += 2){
         int[] parent1 = parents[i];
@@ -84,16 +84,16 @@ static int[][] Reproduce(int[][] parents){
     }
     return offspring;
 }
-static void Mutate(int[][] population){ 
-    for(int i = 0; i < populationSize; i++){ 
-        for(int j = 0; j < chromosomeLength; j++){ 
-            if(random.NextDouble() < mutationRate){ 
-                population[i][j] = 1 - population[i][j]; 
-            } 
-        } 
-    } 
+static void Mutate(int[][] population){
+    for(int i = 0; i < populationSize; i++){
+        for(int j = 0; j < chromosomeLength; j++){
+            if(random.NextDouble() < mutationRate){
+                population[i][j] = 1 - population[i][j];
+            }
+        }
+    }
 }
-static int GetBestFitnessIndex(double[] fitnessScores){ 
+static int GetBestFitnessIndex(double[] fitnessScores){
     int bestFitnessIndex = 0; double bestFitness = fitnessScores[bestFitnessIndex];
     for(int i = 1; i < populationSize; i++){
         if(fitnessScores[i] > bestFitness){
