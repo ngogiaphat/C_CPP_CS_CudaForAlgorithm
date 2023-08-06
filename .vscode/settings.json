@@ -5,4 +5,19 @@
 	"C_Cpp.errorSquiggles": "enabledIfIncludesResolve",
 	"java.configuration.updateBuildConfiguration": "automatic",
 	"dotnet.defaultSolution": "C#\\dotnetproject\\dotnetproject.sln",
+    "search.exclude": {
+        "**/node_modules": true
+    },
+    "files.watcherExclude": {
+        "env-*": true,
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true,
+        "**/.git/subtree-cache/**": true,
+    },
+    "files.exclude": {
+        "env*": true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+    }
 }
