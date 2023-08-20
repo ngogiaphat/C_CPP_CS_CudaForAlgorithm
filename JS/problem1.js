@@ -9,27 +9,27 @@ rl.question("Enter the value of n: ", function(n){
 		const elements = input.split(" ");
 		for(let i = 0; i < n; i++){
 			A[i] = parseInt(elements[i]);
-		}
+		};
 		let newSize = n;
 		for(let i = 0; i < n; i++){
 			if(A[i] % 2 == 0){
 				newSize++;
-			}
-		}
+			};
+		};
 		const newArray = new Array(newSize);
 		let index = 0;
-		for (let i = 0; i < n; i++){
+		for(let i = 0; i < n; i++){
 			if(A[i] % 2 == 0){
 				newArray[index] = 0;
 				index++;
-			}
+			};
 			newArray[index] = A[i];
 			index++;
-		}
+		};
 		console.log(newSize);
 		for(let i = 0; i < newSize; i++){
 			process.stdout.write(newArray[i] + " ");
-		}
+		};
 		rl.close();
 	});
 });
