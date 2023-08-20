@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 int main(){
     int n;
     std::cin >> n;
@@ -6,7 +6,7 @@ int main(){
     if(n >= 0){
         a = n;
         b = 0;
-    } 
+    }
     else {
         a = 0;
         b = n;

@@ -1,15 +1,11 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
+#include<vector>
+#include<iostream>
+#include<algorithm>
 #define MOD 1000000007
 using namespace std;
 typedef long long ll;
 struct Rectangle {
-    ll 
-    x1, 
-    y1, 
-    x2, 
-    y2;
+    ll x1, y1, x2, y2;
 };
 ll countCoveredCells(vector<Rectangle>& rectangles){
     vector<ll> xs, ys;

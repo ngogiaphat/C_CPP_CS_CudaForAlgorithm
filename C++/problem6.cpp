@@ -1,6 +1,6 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include<string>
+#include<vector>
+#include<iostream>
 int countBeautifulStrings(const std::string& str, int L, int R){
     int count = 0;
     int maxCount = 0;
@@ -10,7 +10,7 @@ int countBeautifulStrings(const std::string& str, int L, int R){
             if(count > maxCount){
                 maxCount = count;
             }
-        } 
+        }
         else {
             count = 0;
         }
@@ -41,7 +41,7 @@ int main(){
                 }
             }
             std::cout << "So luong ki tu " << c << " trong chuoi la: " << count << std::endl;
-        } 
+        }
         else if(type == 2){
             std::cout << "Nhap vao L: ";
             std::cin >> L;
