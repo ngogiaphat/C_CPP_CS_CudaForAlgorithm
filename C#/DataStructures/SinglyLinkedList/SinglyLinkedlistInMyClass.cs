@@ -7,13 +7,13 @@ class Student{
         Name = name;
         StudentNumber = studentNumber;
         NextStudent = null;
-    }
-}
+    };
+};
 class ClassList {
     private Student head;
     public ClassList(){
         head = null;
-    }
+    };
     public void AddStudent(string name, int studentNumber){
         Student newStudent = new Student(name, studentNumber);
         if(head == null){
@@ -23,10 +23,10 @@ class ClassList {
             Student currentStudent = head;
             while(currentStudent.NextStudent != null){
                 currentStudent = currentStudent.NextStudent;
-            }
+            };
             currentStudent.NextStudent = newStudent;
-        }
-    }
+        };
+    };
     public void RemoveStudent(int studentNumber){
         if(head == null){
             return;
@@ -41,12 +41,12 @@ class ClassList {
                 if(currentStudent.StudentNumber == studentNumber){
                     previousStudent.NextStudent = currentStudent.NextStudent;
                     return;
-                }
+                };
                 previousStudent = currentStudent;
                 currentStudent = currentStudent.NextStudent;
-            }
-        }
-    }
+            };
+        };
+    };
     public void PrintClassList(){
         if(head == null){
             Console.WriteLine("Class list is empty");
@@ -57,9 +57,9 @@ class ClassList {
         while(currentStudent != null){
             Console.WriteLine("Name: " + currentStudent.Name + ", Student Number: " + currentStudent.StudentNumber);
             currentStudent = currentStudent.NextStudent;
-        }
-    }
-}
+        };
+    };
+};
 class Program {
     static void Main(){
         ClassList myClassList = new ClassList();
@@ -69,5 +69,5 @@ class Program {
         myClassList.PrintClassList(); // output: Class List: Name: John Doe, Student Number: 123456, Name: Jane Doe, Student Number: 789012, Name: Bob Smith, Student Number: 345678
         myClassList.RemoveStudent(789012);
         myClassList.PrintClassList(); // output: Class List: Name: John Doe, Student Number: 123456, Name: Bob Smith, Student Number: 345678
-    }
-}
+    };
+};

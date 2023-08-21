@@ -3,8 +3,8 @@ class Person {
     public int Age;
     public void Display(){
         Console.WriteLine(Name + ", " + Age + " tuoi.");
-    }
-}
+    };
+};
 class Program {
     static void Main(){
         Person person1 = new Person();
@@ -14,5 +14,5 @@ class Program {
         person2.Name = "Jane";
         person2.Age = 25;
         person1.Display(); // output: Jane, 25 tuoi.
-    }
-}
+    };
+};
