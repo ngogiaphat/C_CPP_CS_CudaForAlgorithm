@@ -11,12 +11,12 @@ public class SSLExample {
         Stream stream = response.GetResponseStream();
         StreamReader reader = new StreamReader(stream);
         Console.WriteLine(reader.ReadToEnd());
-    }
+    };
     public static bool ValidateServerCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors){
         if(sslPolicyErrors == SslPolicyErrors.None){
             return true;
-        }
+        };
         Console.WriteLine("SSL Certificate Error: " + sslPolicyErrors.ToString());
         return false;
-    }
-}
+    };
+};

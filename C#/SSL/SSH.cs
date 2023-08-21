@@ -10,7 +10,7 @@ class Program {
                 Console.WriteLine("Kết quả của lệnh: " + result);
                 client.Disconnect();
                 Console.WriteLine("Ngắt kết nối SSH");
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};
