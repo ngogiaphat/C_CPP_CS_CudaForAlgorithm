@@ -22,13 +22,13 @@ void primsAlgorithm(){
                 key[v] = weight;
                 pq.push(make_pair(key[v], v));
                 parent[v] = u;
-            }
-        }
-    }
-    for (int i = 1; i < V; i++){
+            };
+        };
+    };
+    for(int i = 1; i < V; i++){
         cout << parent[i] << " - " << i << endl;
-    }
-}
+    };
+};
 int main(){
     cin >> V >> E;
     for(int i = 0; i < E; i++){
@@ -36,7 +36,7 @@ int main(){
         cin >> u >> v >> w;
         adj[u].push_back(make_pair(v, w));
         adj[v].push_back(make_pair(u, w));
-    }
+    };
     primsAlgorithm();
     return 0;
-}
+};
