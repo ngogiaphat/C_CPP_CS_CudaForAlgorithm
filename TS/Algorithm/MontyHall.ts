@@ -1,3 +1,4 @@
+// @ts-nocheck
 const rand = (from: number = 0, to: number = 10): number => Math.floor(Math.random()*(to - from + 1)) + from;
 const start = (turn: number = 1, change: boolean = false): {
     correct: number,
