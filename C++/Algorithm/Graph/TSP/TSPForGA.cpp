@@ -1,7 +1,7 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <cmath>
+#include<ctime>
+#include<cmath>
+#include<cstdlib>
+#include<iostream>
 using namespace std;
 const int MAXN = 100; //Maximum number of cities
 const int MAXGEN = 1000; // Số thế hệ tối đa
@@ -13,7 +13,6 @@ int n; //Cities
 double d[MAXN][MAXN]; //Distance Matrix
 int a[POPSIZE][MAXN]; //Solution Matrix
 double fit[POPSIZE]; //Value fitness
-
 //Create solution
 void init(){
     for(int t = 0; t < POPSIZE; ++t){
@@ -40,7 +39,7 @@ void calcFitness(){
 void crossover(int t1, int t2){
     int p = rand() % (n - 1) + 1;
     for(int i = 0; i < n; ++i){
-        if(i < p) {
+        if(i < p){
             continue;
         }
         int j = 0;
@@ -68,7 +67,7 @@ void crossover(int t1, int t2){
 void mutate(int t){
     int p1 = rand() % n;
     int p2 = rand() % n;
-    while(p1 == p2) {
+    while(p1 == p2){
         p2 = rand() % n;
     }
     swap(a[t][p1], a[t][p2]);
@@ -77,7 +76,7 @@ void mutate(int t){
 void selection(){
     double newFit[POPSIZE + 1];
     int idx[POPSIZE + 1];
-    for(int t = 0; t < POPSIZE; ++t) {
+    for(int t = 0; t < POPSIZE; ++t){
         idx[t] = t;
         newFit[t] = 1.0 / (1.0 + fit[t]);
     }
@@ -88,7 +87,7 @@ void selection(){
     for(int t = 0; t < POPSIZE; ++t){
         double r = (double)rand() / RAND_MAX * newFit[POPSIZE];
         int i = 0;
-        while(r > newFit[i]) {
+        while(r > newFit[i]){
             r -= newFit[i];
             ++i;
         }
@@ -96,7 +95,7 @@ void selection(){
         do {
             r = (double)rand() / RAND_MAX * newFit[POPSIZE];
             j = 0;
-            while(r > newFit[j]) {
+            while(r > newFit[j]){
                 r -= newFit[j];
                 ++j;
             }
