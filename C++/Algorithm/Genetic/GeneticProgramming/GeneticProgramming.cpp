@@ -1,8 +1,8 @@
-#include <iostream>
-#include <cmath>
-#include <vector>
-#include <algorithm>
-#include <ctime>
+#include<cmath>
+#include<ctime>
+#include<vector>
+#include<iostream>
+#include<algorithm>
 using namespace std;
 const int POPULATION_SIZE = 1000;
 const int CHROMOSOME_LENGTH = 50;
@@ -40,7 +40,7 @@ vector<double> select_parent(const vector<vector<double>>& population){
     double random_fitness = static_cast<double>(rand()) / static_cast<double>(RAND_MAX) * total_fitness;
     for(const auto& chromosome : population){
         random_fitness -= fitness_function(chromosome);
-        if (random_fitness < 0.0){
+        if(random_fitness < 0.0){
             return chromosome;
         }
     }
@@ -51,11 +51,11 @@ vector<double> reproduce(const vector<double>& parent1, const vector<double>& pa
     for(int i = 0; i < CHROMOSOME_LENGTH; ++i){
         if(static_cast<double>(rand()) / static_cast<double>(RAND_MAX) < CROSSOVER_PROBABILITY){
             offspring[i] = parent1[i];
-        } 
+        }
         else {
             offspring[i] = parent2[i];
         }
-        if (static_cast<double>(rand()) / static_cast<double>(RAND_MAX) < MUTATION_PROBABILITY){
+        if(static_cast<double>(rand()) / static_cast<double>(RAND_MAX) < MUTATION_PROBABILITY){
             double mutation = -0.5 + static_cast<double>(rand()) / (static_cast<double>(RAND_MAX / (1.0 - -0.5)));
             offspring[i] += mutation;
             if(offspring[i] < -0.5){
