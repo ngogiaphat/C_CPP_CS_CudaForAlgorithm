@@ -1,60 +1,21 @@
 {
     "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "cppvsdbg",
-            "request": "launch",
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "name": "(Windows) Launch",
-            "console": "externalTerminal",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
-            "args": [],
-            "environment": [],
-        },
-        {
-            "MIMode": "gdb",
-            "type": "cppdbg",
-            "request": "launch",
-            "stopAtEntry": false,
-            "name": "(gdb) Launch",
-            "preLaunchTask": "build",
-            "externalConsole": false,
-            "cwd": "${workspaceFolder}",
-            "program": "${workspaceFolder}/a.exe",
-            "miDebuggerPath": "C:\\Mingw-w64\\mingw32\\bin\\gdb.exe",
-            "args": [],
-            "environment": [],
-            "setupCommands": [{
-                "ignoreFailures": true,
-                "text": "-enable-pretty-printing",
-                "description": "Enable pretty-printing for gdb",
-            }]
-        },
-        {
-            "args": [],
-            "MIMode": "gdb",
-            "type": "cppdbg",
-            "environment": [],
-            "request": "launch",
-            "stopAtEntry": false,
-            "name": "(gdb) Launch",
-            "cwd": "${fileDirname}",
-            "externalConsole": false,
-            "miDebuggerPath": "/path/to/gdb",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
-            "setupCommands": [
-                {
-                    "ignoreFailures": true,
-                    "text": "-enable-pretty-printing",
-                    "description": "Enable pretty-printing for gdb",
-                },
-                {
-                    "ignoreFailures": true,
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "description": "Set Disassembly Flavor to Intel",
-                }
-            ]
-        },
-    ]
+    "configurations": [ {
+        "name": "(gdb) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/a.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:\\w64devkit\\bin\\gdb.exe",
+        "setupCommands": [{
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        }]
+    }]
 }
