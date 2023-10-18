@@ -6,8 +6,9 @@ class Graph {
     public Graph(int v){
         V = v;
         adj = new List<int>[v];
-        for (int i = 0; i < v; ++i)
+        for(int i = 0; i < v; ++i){
             adj[i] = new List<int>();
+        }
     }
     public void addEdge(int v, int w){
         adj[v].Add(w);

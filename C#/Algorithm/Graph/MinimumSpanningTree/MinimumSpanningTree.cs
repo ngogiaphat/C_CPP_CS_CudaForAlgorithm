@@ -4,7 +4,7 @@ public class MST{
     int MinKey(int[] key, bool[] mstSet){
         int min = int.MaxValue, minIndex = -1;
         for(int v = 0; v < V; ++v){
-            if (mstSet[v] == false && key[v] < min){
+            if(mstSet[v] == false && key[v] < min){
                 min = key[v];
                 minIndex = v;
             };

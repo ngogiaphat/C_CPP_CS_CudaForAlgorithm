@@ -28,8 +28,9 @@ public class GFG {
             return;
         };
         while(L > 0){
-            if((L & 1) == 1)
+            if((L & 1) == 1){
                 x = jump[x][j];
+            }
             L = L >> 1;
             j++;
         };

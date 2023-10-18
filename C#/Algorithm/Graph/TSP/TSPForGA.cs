@@ -11,7 +11,7 @@ class TSP_GA {
         GeneticAlgorithm ga = new GeneticAlgorithm(100, 0.01, 0.6, 2, 25);
         int[] solution = ga.FindShortestPath(distanceMatrix, n);
         Console.WriteLine("Duong di ngan nhat: ");
-        foreach (int city in solution){
+        foreach(int city in solution){
             Console.Write(city + " ");
         }
     }
@@ -68,7 +68,7 @@ class Population {
     private List<Chromosome> chromosomes = new List<Chromosome>();
     private int fittestIndex;
     public Population(int populationSize, int chromosomeLength){
-        for (int i = 0; i < populationSize; i++){
+        for(int i = 0; i < populationSize; i++){
             chromosomes.Add(new Chromosome(chromosomeLength));
         }
     }
@@ -146,7 +146,6 @@ class Population {
                 }
             }
         }
-
         return this;
     }
     public int GetFittestIndex(){
@@ -183,7 +182,7 @@ class Chromosome{
         for(int i = 0; i < genes.Length; i++){
             genes[i] = i;
         }
-        for (int i = 0; i < genes.Length; i++){
+        for(int i = 0; i < genes.Length; i++){
             int randomIndex = Random.Next(genes.Length);
             int temp = genes[randomIndex];
             genes[randomIndex] = genes[i];

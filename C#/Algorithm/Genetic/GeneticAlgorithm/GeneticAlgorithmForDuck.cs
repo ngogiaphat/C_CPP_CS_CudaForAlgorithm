@@ -8,7 +8,7 @@ class Program {
     static void Main(string[] args){
         //Initialize the population
         List<Duck> population = new List<Duck>();
-        for (int i = 0; i < POPULATION_SIZE; i++){
+        for(int i = 0; i < POPULATION_SIZE; i++){
             population.Add(new Duck());
         }
         //Evolve the population across generations
@@ -17,7 +17,6 @@ class Program {
             foreach (Duck duck in population){
                 duck.Fitness = duck.CalculateFitness();
             }
-
             // Create a new population through selection and crossover
             List<Duck> newPopulation = new List<Duck>();
             for(int j = 0; j < POPULATION_SIZE; j++){
@@ -34,11 +33,10 @@ class Program {
             //Replace the old population with the new population
             population = newPopulation;
         }
-
         //Find the best individual in the final population
         double bestFitness = double.MinValue;
         Duck bestDuck = null;
-        foreach (Duck duck in population){
+        foreach(Duck duck in population){
             double fitness = duck.CalculateFitness();
             if(fitness > bestFitness){
                 bestFitness = fitness;
@@ -74,8 +72,8 @@ class Duck {
     public double CalculateFitness(){
         //Fitness function: the number of 'true' values in the genome
         int count = 0;
-        foreach (bool gene in genome){
-            if (gene){
+        foreach(bool gene in genome){
+            if(gene){
                 count++;
             }
         }

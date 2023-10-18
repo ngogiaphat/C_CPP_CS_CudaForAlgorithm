@@ -17,13 +17,12 @@ public class DijkstraAlgorithm {
             for(int j = 0; j < nodesCount; ++j){
                 if(graph[currentNode, j] > 0 && !visited[j]){
                     int newDistance = distance[currentNode] + graph[currentNode, j];
-                    if (newDistance < distance[j]){
+                    if(newDistance < distance[j]){
                         distance[j] = newDistance;
                     }
                 }
             }
         }
-
         PrintResult(distance);
     }
     private int FindNextNodeWithMinDistance(int[] distance, bool[] visited){

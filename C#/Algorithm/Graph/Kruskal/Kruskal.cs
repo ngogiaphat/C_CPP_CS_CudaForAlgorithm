@@ -6,17 +6,20 @@ class KruskalMst{
         public int U, V, W;
     }
     static int Find(int[] parent, int i){
-        if(parent[i] == i)
-            return i;
+        if(parent[i] == i){
+             return i;
+        }
         return parent[i] = Find(parent, parent[i]);
     }
     static void Union(int[] parent, int[] rank, int x, int y){
         int xroot = Find(parent, x);
         int yroot = Find(parent, y);
-        if(rank[xroot] < rank[rootY])
+        if(rank[xroot] < rank[rootY]){
             parent[rootX] = rootY;
-        else if(rank[rootX] > rank[rootY])
+        }
+        else if(rank[rootX] > rank[rootY]){
             parent[rootY] = rootX;
+        }
         else {
             parent[rootX] = rootY;
             rank[rootY]++;
@@ -39,8 +42,9 @@ class KruskalMst{
                 mst.Add(edge);
                 cnt++;
             }
-            if(cnt == n - 1)
+            if(cnt == n - 1){
                 break;
+            }
         }
         return mst;
     }
@@ -54,7 +58,8 @@ class KruskalMst{
             new Edge(){U = 2, V = 3, W = 4},
         };
         var mst = Kruksal(edges, n);
-        foreach(var edge in mst)
+        foreach(var edge in mst){
             Console.WriteLine($"{edge.U} {edge.V} {edge.W}");
+        }
     }
 }

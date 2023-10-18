@@ -16,8 +16,9 @@ class GFG {
             if(dp[n - 1][m - 1] == -1){
                 return dp[n][m] = minDis(s1, s2, n - 1, m - 1, dp);
             }
-            else
+            else {
                 return dp[n][m] = dp[n - 1][m - 1];
+            }
         };
         // If characters are nt equal, we need to find the minimum cost out of all 3 operations.
         else {

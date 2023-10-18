@@ -16,9 +16,11 @@ namespace TSP {
             return (a < b) ? a : b;
         }
         static int Tsp(int s){
-            for(int i = 0; i < n; i++)
-                if (i != s)
+            for(int i = 0; i < n; i++){
+                if(i != s){
                     v.Add(i);
+                }
+            }
             int min_path = N;
             do {
                 int cur_path = 0;
@@ -31,7 +33,7 @@ namespace TSP {
                 min_path = Min(min_path, cur_path);
 
             }
-            while (NextPermutation(v));
+            while(NextPermutation(v));
             return min_path;
         }
         static bool NextPermutation(List<int> nums){

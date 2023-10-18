@@ -6,21 +6,26 @@ class RETH {
     static int[, , ] dp = new int[702, 502, 2];
     static int solve(int j, int i, int b){
         // if the result has already been calculated return that result
-        if(dp[i, j, b] != -1)
+        if(dp[i, j, b] != -1){
             return dp[i, j, b];
+        }
         // if i has reached the end of the array return 0
-        if(i == B)
+        if(i == B){
             return 0;
+        }
         // if we have exhausted the number of transactions return 0
-        if(j == 0)
+        if(j == 0){
             return 0;
+        }
         int res;
         // if we are to buy stocks
-        if(b == 1)
+        if(b == 1){
             res = Math.Max(-A[i] + solve(j, i, + 1, 0), solve(j, i + 1, 1));
+        }
         // if we're to sell stock and complete 1 transaction
-        else
+        else {
             res = Math.Max(A[i] + solve(j - 1, i + 1, 1), solve(j, i + 1, 0));
+        }
         // return the result
         return dp[i, j, b] = res;
     };

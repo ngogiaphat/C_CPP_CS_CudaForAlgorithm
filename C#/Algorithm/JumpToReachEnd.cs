@@ -5,9 +5,10 @@ class GFG {
 		// result
 		int[] jumps = new int[n];
 		// if first element is 0,
-		if(n == 0 || arr[0] == 0)
-			// end cannot be reached
+		if(n == 0 || arr[0] == 0){
+            // end cannot be reached
 			return int.MaxValue;
+        }
 		jumps[0] = 0;
 		// Find the minimum number of jumps to reach arr[i] from arr[0], and assign this value to jumps[i]
 		for(int i = 1; i < n; i++){

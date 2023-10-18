@@ -20,8 +20,9 @@ class RETH {
         for(int d = (minarr - maxarr); d <= (maxarr - minarr); d++){
             dp[i] = 1;
             // adding counts of Arithmetic Progression with given difference and a[i] is last element. We consider all Arithmetic Progression where an array element is previous element of AP with a particular difference
-            if(a[i] - d >= 1 && a[i] - d <= 1000000)
+            if(a[i] - d >= 1 && a[i] - d <= 1000000){
                 dp[i] += sum[a[i] - d];
+            }
             ans += dp[i] - 1;
             sum[a[i]] += dp[i];
         };
