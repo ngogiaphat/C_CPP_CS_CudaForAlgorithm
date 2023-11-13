@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <cuda_runtime.h>
+#include<stdio.h>
+#include<cuda_runtime.h>
 __global__ void hashFunction(const char* input, int* output){
     int tid = blockIdx.x * blockDim.x + threadIdx.x;
     output[tid] = input[tid] % 256;

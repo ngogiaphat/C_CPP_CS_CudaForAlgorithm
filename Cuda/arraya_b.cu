@@ -1,9 +1,10 @@
-#include <iostream>
-#include <cuda.h>
+#include<cuda.h>
+#include<iostream>
 __global__ void addArrays(int* a, int* b, int* c, int size){
     int tid = blockIdx.x * blockDim.x + threadIdx.x;
-    if(tid < size)
+    if(tid < size){
         c[tid] = a[tid] + b[tid];
+    }
 }
 int main(){
     int size = 1000;

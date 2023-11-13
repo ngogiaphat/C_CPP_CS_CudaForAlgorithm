@@ -1,14 +1,11 @@
 #define N 10000000
-void vector_add(float *out, float *a, float *b, int n) 
-{
-    for(int i = 0; i < n; i++)
-    {
+void vector_add(float *out, float *a, float *b, int n) {
+    for(int i = 0; i < n; i++){
         out[i] = a[i] + b[i];
     }
 }
-int main()
-{
-    float *a, *b, *out; 
+int main(){
+    float *a, *b, *out;
     // Allocate memory
     a   = (float*)malloc(sizeof(float) * N);
     b   = (float*)malloc(sizeof(float) * N);

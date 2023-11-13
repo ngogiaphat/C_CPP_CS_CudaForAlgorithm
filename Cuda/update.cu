@@ -1,4 +1,3 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31717.71
@@ -391,7 +390,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c++11_cuda", "Samples\0_Int
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asyncAPI", "Samples\0_Introduction\asyncAPI\asyncAPI_vs2022.vcxproj", "{767F595D-3B56-4FEE-928D-AA811C665B21}"
 EndProject
-Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Release|x64 = Release|x64
@@ -1340,7 +1339,7 @@ Global
 		{46A2D354-A3BF-4861-8508-EB04AADFE8BB} = {C557A915-52AB-4BA0-BEED-D65E6BCE42AA}
 		{767F595D-3B56-4FEE-928D-AA811C665B21} = {C557A915-52AB-4BA0-BEED-D65E6BCE42AA}
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1E4D9A78-96FB-4D12-9CCD-4D107E42F203}
+    GlobalSection(ExtensibilityGlobals) = postSolution
+        SolutionGuid = {1E4D9A78-96FB-4D12-9CCD-4D107E42F203}
 	EndGlobalSection
 EndGlobal
