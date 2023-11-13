@@ -54,21 +54,13 @@ PropertyInfo piPropertyInfo = calcType.GetProperty("Pi");
 double piValue = (double)piPropertyInfo.GetValue(null, null);
 [C#]
 // invoke public instance method: public void Clear()
-calcType.InvokeMember(
-    "Clear", BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.Public, null, calcInstance, null
-);
+calcType.InvokeMember("Clear", BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.Public, null, calcInstance, null);
 [C#]
 // invoke private instance method: private void DoClear()
-calcType.InvokeMember(
-    "DoClear", BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.NonPublic, null, calcInstance, null
-);
+calcType.InvokeMember("DoClear", BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.NonPublic, null, calcInstance, null);
 [C#]
 // invoke public instance method: public double Add(double number)
-double value = (double)calcType.InvokeMember(
-    "Add", BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.Public, null, calcInstance, new object[]{
-        20.0
-    }
-);
+double value = (double)calcType.InvokeMember("Add", BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.Public, null, calcInstance, new object[]{20.0});
 [C#]
 // invoke public static method: public static double GetPi()
 double piValue = (double)calcType.InvokeMember(
@@ -77,6 +69,4 @@ double piValue = (double)calcType.InvokeMember(
 );
 [C#]
 // get value of private field: private double _number
-double value = (double)calcType.InvokeMember(
-    "_number", BindingFlags.GetField | BindingFlags.Instance | BindingFlags.NonPublic, null, calcInstance, null
-);
+double value = (double)calcType.InvokeMember("_number", BindingFlags.GetField | BindingFlags.Instance | BindingFlags.NonPublic, null, calcInstance, null);

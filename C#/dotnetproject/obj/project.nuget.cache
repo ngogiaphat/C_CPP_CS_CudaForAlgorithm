@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "H/c+SJl7k50QSY/B1EMg52rgZDvP3jgderm2NSzMya2G901eCczrg7Ol6aym5nCAhUFou8PqyMM+ewjFrpaQ7Q==",
+  "dgSpecHash": "755i62zoeiKYEfzww6JCCno+/b9H+oWVkpgiRL/J4/QEjpwUhCQx36xBdHLPGomN+mF02sKJeNuMr8k3ygVh4Q==",
   "success": true,
   "projectFilePath": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ngogi\\.nuget\\packages\\ssh.net\\2020.0.2\\ssh.net.2020.0.2.nupkg.sha512",
-    "C:\\Users\\ngogi\\.nuget\\packages\\sshnet.security.cryptography\\1.3.0\\sshnet.security.cryptography.1.3.0.nupkg.sha512"
+    "C:\\Users\\Ngo Gia Phat\\.nuget\\packages\\ssh.net\\2023.0.0\\ssh.net.2023.0.0.nupkg.sha512",
+    "C:\\Users\\Ngo Gia Phat\\.nuget\\packages\\sshnet.security.cryptography\\1.3.0\\sshnet.security.cryptography.1.3.0.nupkg.sha512"
   ],
   "logs": []
 }

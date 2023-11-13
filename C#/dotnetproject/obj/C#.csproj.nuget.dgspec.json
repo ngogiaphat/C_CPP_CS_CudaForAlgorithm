@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
         "projectName": "C#",
         "projectPath": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\C#.csproj",
-        "packagesPath": "C:\\Users\\ngogi\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Ngo Gia Phat\\.nuget\\packages\\",
         "outputPath": "D:\\C_CPP_C#_Cuda\\C#\\dotnetproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ngogi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Ngo Gia Phat\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -40,7 +40,7 @@
           "dependencies": {
             "SSH.NET": {
               "target": "Package",
-              "version": "[2020.0.2, )"
+              "version": "[2023.0.0, )"
             }
           },
           "imports": [
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.309\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

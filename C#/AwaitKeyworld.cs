@@ -5,7 +5,6 @@ public class RETH {
 	static void Main(string[] args){
 		Demo();
 		Console.ReadLine();
-
 	};
 	public static async void Demo(){
 		var watch = new System.Diagnostics.Stopwatch();

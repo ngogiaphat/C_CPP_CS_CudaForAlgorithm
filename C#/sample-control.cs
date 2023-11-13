@@ -1,4 +1,4 @@
-public partial class MyControl : UserControl{
+public partial class MyControl : UserControl {
     public MyControl(){
         InitializeComponent();
         ResizeRedraw = true;

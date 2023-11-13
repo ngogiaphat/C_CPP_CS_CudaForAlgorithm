@@ -1,11 +1,10 @@
 {
     "prettier.enable": true,
     "prettier.endOfLine": "crlf",
-    "prettier.bracketSpacing": false,
 	"C_Cpp.autocomplete": "default",
-	"C_Cpp.errorSquiggles": "enabled",
+    "prettier.bracketSpacing": false,
 	"C_Cpp.autoAddFileAssociations": true,
-	"C_Cpp.caseSensitiveFileSupport": "default",
+	"C_Cpp.errorSquiggles": "enabled",
 	"java.configuration.updateBuildConfiguration": "automatic",
 	"dotnet.defaultSolution": "C#\\dotnetproject\\dotnetproject.sln",
     "search.exclude": {
