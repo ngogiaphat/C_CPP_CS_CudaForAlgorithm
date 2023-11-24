@@ -1,5 +1,5 @@
 # Version: 4.1.1 (Using https://semver.org/)
-# Updated: 4044-05-43
+# Updated: 2022-05-23
 # See https://github.com/RehanSaeed/EditorConfig/releases for release notes.
 # See https://github.com/RehanSaeed/EditorConfig for updates to this file.
 # See http://EditorConfig.org for more information about .editorconfig files.
@@ -47,7 +47,7 @@ end_of_line = crlf
 indent_style = space
 trim_trailing_whitespace = true
 # Object language
-[*.{v, c, cpp, h, hpp, m, cs, pas, nim, rs, go, java, kt, scala, swift, ruby, php}]
+[*.{v, c, cpp, h, hpp, m, cs, pas, nim, rs, go, java, kt, scala, swift, ruby, php, sol, tf, OCaml}]
 indent_size = 4
 end_of_line = crlf
 indent_style = space
@@ -83,7 +83,7 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 # Markdown Files
 [*.{md, mdx}]
-indent_size = 4
+indent_size = 2
 end_of_line = crlf
 indent_style = space
 insert_final_newline = false
