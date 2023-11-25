@@ -15,7 +15,7 @@ indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
 # Matches the exact package files
-[*.{package.json, package-lock.json, .eslintrc.json, .eslintignore, .prettierrc.json, .prettierignore, firebase.json, babel.config.json, edgeware.json, .travis.yml, LICENSE, VERSION}]
+[*.{package.json, package-lock.json, yarn.locl, pnpm-lock.yaml, pnpm-workspace.yaml, .eslintrc, eslintrc.js, .eslintignore, .prettierrc, .prettierrc.js, .prettierignore, firebase.json, babel.config.json, edgeware.json, .travis.yml, LICENSE, VERSION}]
 indent_size = 4
 end_of_line = crlf
 indent_style = space
@@ -26,7 +26,6 @@ trim_trailing_whitespace = true
 indent_size = 4
 end_of_line = crlf
 indent_style = space
-insert_final_newline = false
 trim_trailing_whitespace = true
 # JS files and typechecker files
 [*.{js, cjs, mjs, ts, cts, mts, jsx, tsx, vue, svelte, astro, gql, graphql}]
@@ -34,21 +33,25 @@ charset = utf-8
 indent_size = 4
 end_of_line = crlf
 indent_style = space
-insert_final_newline = false
 trim_trailing_whitespace = true
-# language for Data Science
+# Language for Data Science
 [*.{ipynb, nb, py, pyx, pxi, pxd, r, rmd}]
 indent_size = 4
 end_of_line = crlf
 indent_style = space
-insert_final_newline = false
 trim_trailing_whitespace = true
-# styles files
-[*.{css, scss, sass, less, styl, stylus}]
+# Makeup languages
+[*.{xml, xsl, htm, html, xhtml, cshtml, vbhtml, haml, phtml, jinja, hbs, handlebars}]
 indent_size = 4
 end_of_line = crlf
 indent_style = space
 insert_final_newline = false
+trim_trailing_whitespace = true
+# Styles languages
+[*.{css, scss, sass, less, styl, stylus}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
 trim_trailing_whitespace = true
 # Object language
 [*.{v, c, cpp, h, hpp, m, cs, pas, nim, rs, go, java, kt, scala, swift, ruby, php, sol, tf, OCaml}]
@@ -106,48 +109,31 @@ end_of_line = crlf
 indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
-##########################################
-[*.{cs, csx, cake}]
 # C# Style Rules
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/language-rules#c-style-rules
-indent_size = 4
-end_of_line = crlf
-indent_style = space
-insert_final_newline = false
-trim_trailing_whitespace = true
+[*.{cs, csx, cake}]
 # .NET Naming Rules
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/naming-rules
 ##########################################
 [*.{cs, csx, cake, vb, vbx}]
 ##########################################
 # Default .NET Code Style Severities
-# Default Severity for all .NET Code Style rules below
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/configuration-options#scope
-# https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/unnecessary-code-rules
-indent_size = 4
-end_of_line = crlf
-indent_style = space
-insert_final_newline = false
-trim_trailing_whitespace = true
+##########################################
+[*.{cs, csx, cake, vb, vbx}]
+# Default Severity for all .NET Code Style rules below
 dotnet_analyzer_diagnostic.severity = warning
+##########################################
+# Unnecessary Code Rules
+# https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/unnecessary-code-rules
 ##########################################
 # .NET Unnecessary code rules
 [*.{cs, csx, cake, vb, vbx}]
-# .NET formatting rules
-# https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/formatting-rules#net-formatting-rules
-indent_size = 4
-end_of_line = crlf
-indent_style = space
-insert_final_newline = false
-trim_trailing_whitespace = true
 dotnet_code_quality_unused_parameters = all:warning
 dotnet_remove_unnecessary_suppression_exclusions = all:warning
+# .NET formatting rules
+# https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/formatting-rules#net-formatting-rules
 [*.{cs, csx, cake, vb, vbx}]
-indent_size = 4
-end_of_line = crlf
-indent_style = space
-insert_final_newline = false
-trim_trailing_whitespace = true
 # Organize using directives
 dotnet_sort_system_directives_first = true
 dotnet_separate_import_directive_groups = false
@@ -157,11 +143,6 @@ dotnet_style_namespace_match_folder = true:suggestion
 # C# formatting rules
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/formatting-rules#c-formatting-rules
 [*.{cs, csx, cake}]
-indent_size = 4
-end_of_line = crlf
-indent_style = space
-insert_final_newline = false
-trim_trailing_whitespace = true
 # Newline options
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/formatting-rules#new-line-options
 csharp_new_line_before_else = false
@@ -178,7 +159,7 @@ csharp_indent_labels = no_change
 csharp_indent_case_contents = true
 csharp_indent_switch_labels = true
 csharp_indent_block_contents = true
-csharp_indent_case_contents_when_block = false
+csharp_indent_case_contents_when_block = true
 # 'using' directive preferences
 csharp_using_directive_placement = inside_namespace:warning
 # Modifier preferences
@@ -220,12 +201,12 @@ csharp_style_expression_bodied_local_functions = true:warning
 ##########################################
 # License
 ##########################################
-# The following applies as to the .editorconfig file ONLY, and is included below for reference, per the requirements of the license
-# corresponding to this .editorconfig file. See: https://github.com/RehanSaeed/EditorConfig
+# The following applies as to the .editorconfig file ONLY and is included below for reference, per the requirements of the license corresponding to this .editorconfig file.
+# See: https://github.com/RehanSaeed/EditorConfig
 # MIT License
 # Copyright (c) 2017-2019 Muhammad Rehan Saeed
 # Copyright (c) 2019 Henry Gabryjelski
-# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated ocumentation files (the "Software"), to deal in the
 # Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,
 # sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 # The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
