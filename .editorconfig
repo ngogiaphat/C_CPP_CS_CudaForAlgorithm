@@ -122,7 +122,7 @@ trim_trailing_whitespace = true
 ##########################################
 [*.{cs, csx, cake, vb, vbx}]
 # Default Severity for all .NET Code Style rules below
-dotnet_analyzer_diagnostic.severity = warning
+dotnet_analyzer_diagnostic.severity = all:warning
 ##########################################
 # Unnecessary Code Rules
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/unnecessary-code-rules
