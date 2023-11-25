@@ -102,9 +102,15 @@ end_of_line = crlf
 indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
+##########################################
+[*.{cs, csx, cake}]
 # C# Style Rules
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/language-rules#c-style-rules
-[*.{cs, csx, cake}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
 # .NET Naming Rules
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/naming-rules
 ##########################################
@@ -114,15 +120,17 @@ trim_trailing_whitespace = true
 # Default Severity for all .NET Code Style rules below
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/configuration-options#scope
 # https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/unnecessary-code-rules
-##########################################
 indent_size = 4
 end_of_line = crlf
 indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
 dotnet_analyzer_diagnostic.severity = warning
+##########################################
 # .NET Unnecessary code rules
 [*.{cs, csx, cake, vb, vbx}]
+# .NET formatting rules
+# https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/formatting-rules#net-formatting-rules
 indent_size = 4
 end_of_line = crlf
 indent_style = space
@@ -130,8 +138,6 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 dotnet_code_quality_unused_parameters = all:warning
 dotnet_remove_unnecessary_suppression_exclusions = all:warning
-# .NET formatting rules
-# https://docs.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/formatting-rules#net-formatting-rules
 [*.{cs, csx, cake, vb, vbx}]
 indent_size = 4
 end_of_line = crlf
