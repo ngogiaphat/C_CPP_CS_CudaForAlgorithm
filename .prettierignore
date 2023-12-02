@@ -1,0 +1,10 @@
+node_modules
+*.yarn
+yarn.lock
+pnpm-lock.yaml
+pnpm-workspace.yaml
+package.json
+package-lock.json
+.prettierrc
+.prettierrc.js
+*.md
