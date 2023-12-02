@@ -13,5 +13,5 @@
 	"quoteProps": "as-needed",
 	"jsxBracketSameLine": true,
 	"vueIndentScriptAndStyle": true,
-	"htmlWhitespaceSensitivity": "css",
+	"htmlWhitespaceSensitivity": "css"
 }
