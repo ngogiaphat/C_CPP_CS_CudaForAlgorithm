@@ -3,8 +3,8 @@
     "prettier.endOfLine": "crlf",
 	"C_Cpp.autocomplete": "default",
     "prettier.bracketSpacing": false,
-	"C_Cpp.autoAddFileAssociations": true,
 	"C_Cpp.errorSquiggles": "enabled",
+	"C_Cpp.autoAddFileAssociations": true,
 	"java.configuration.updateBuildConfiguration": "automatic",
 	"dotnet.defaultSolution": "C#\\dotnetproject\\dotnetproject.sln",
     "search.exclude": {
